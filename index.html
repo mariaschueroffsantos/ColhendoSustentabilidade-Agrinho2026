@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Colhendo Sustentabilidade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+
+            <button onclick="alternarTema()" class="tema-btn" aria-label="Alternar entre tema claro e escuro">
+                🌙 / ☀️ Tema
+            </button>
+
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#fazenda">Fazenda</a>
+                <a href="#mapa">Mapa</a>
+                <a href="#simulador">Simulador</a>
+                <a href="#quiz">Quiz</a>
+                <a href="#tecnologia">Tecnologias</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+
+            <img src="imagens/fazenda.jpg" alt="Fazenda Sustentável" class="banner">
+
+            <div class="hero-texto">
+                <h1>Colhendo Sustentabilidade</h1>
+                <p>Tecnologia, inovação e preservação para o futuro do campo.</p>
+            </div>
+
+        </section>
+
+        <section id="inicio">
+            <div class="introducao">
+                <h2>Bem-vindo ao Campo Sustentável</h2>
+
+                <p>
+                    O projeto Colhendo Sustentabilidade mostra como a agricultura pode produzir alimentos
+                    de forma eficiente sem prejudicar o meio ambiente. Através da
+                    tecnologia e de práticas sustentáveis, é possível garantir um
+                    futuro melhor para todos. No nosso site, você poderá aprender
+                    como equilibrar produção e meio ambiente através de exemplos práticos e de simulações em uma fazenda
+                    digital.
+                </p>
+            </div>
+        </section>
+
+        <section id="fazenda">
+            <h2>Conheça a Fazenda</h2>
+
+            <div class="cards">
+
+
+                <div class="card" onclick="mostrarInfo(this)">
+                    <h3>🌱 Plantação Sustentável</h3>
+                    <p>Uso consciente do solo e da água.</p>
+
+                    <div class="info-extra">
+                        A rotação de culturas preserva os nutrientes do solo, reduz pragas e aumenta a produtividade.
+                    </div>
+                </div>
+
+                <div class="card" onclick="mostrarInfo(this)">
+                    <h3>☀️ Energia Solar</h3>
+                    <p>Produção de energia limpa e renovável.</p>
+
+                    <div class="info-extra">
+                        Os painéis solares reduzem gastos com energia e diminuem os impactos ambientais.
+                    </div>
+                </div>
+
+                <div class="card" onclick="mostrarInfo(this)">
+                    <h3>💧 Captação de Água</h3>
+                    <p>Reutilização da água da chuva.</p>
+
+                    <div class="info-extra">
+                        A água armazenada pode ser utilizada na irrigação e em diversas atividades da fazenda.
+                    </div>
+                </div>
+
+                <div class="card" onclick="mostrarInfo(this)">
+                    <h3>🚁 Drones Agrícolas</h3>
+                    <p>Monitoramento inteligente das lavouras.</p>
+
+                    <div class="info-extra">
+                        Os drones identificam falhas no plantio, pragas e áreas que precisam de mais atenção.
+                    </div>
+                </div>
+
+                <div class="card" onclick="mostrarInfo(this)">
+                    <h3>🌳 Preservação Ambiental</h3>
+                    <p>Proteção das áreas verdes e da biodiversidade.</p>
+
+                    <div class="info-extra">
+                        A preservação das matas protege nascentes, animais e contribui para o equilíbrio ambiental.
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="mapa">
+
+            <h2>Mapa da Fazenda Sustentável</h2>
+
+            <div class="mapa">
+                <img src="imagens/mapa-fazenda.png"
+                    alt="Mapa ilustrado de uma fazenda sustentável com áreas de plantação, captação de água, energia solar e preservação ambiental.">
+            </div>
+
+        </section>
+
+        <section id="simulador">
+
+            <h2>Simulador da Fazenda</h2>
+
+            <h3>Pontuação de Sustentabilidade:</h3>
+            <p id="pontuacao">50</p>
+
+            <div class="barra">
+                <div id="nivel"></div>
+            </div>
+
+            <h3>Como reduzir os custos de energia da fazenda?</h3>
+
+            <div id="energia">
+                <button onclick="perder10('⚠️ Solução menos sustentável.', 'energia')">
+                    Comprar um gerador mais potente
+                </button>
+
+                <button onclick="ganhar10('☀️ Energia renovável adotada.', 'energia')">
+                    Instalar painéis solares
+                </button>
+            </div>
+
+            <h3>Como melhorar a irrigação da lavoura?</h3>
+
+            <div id="irrigacao">
+                <button onclick="perder10('⚠️ Maior consumo de água.', 'irrigacao')">
+                    Aumentar o tempo de irrigação diária
+                </button>
+
+                <button onclick="ganhar10('💧 Uso eficiente da água.', 'irrigacao')">
+                    Irrigação por gotejamento
+                </button>
+            </div>
+
+            <h3>Como acompanhar a saúde das plantações?</h3>
+
+            <div id="monitoramento">
+                <button onclick="ganhar10('🚁 Monitoramento mais preciso.', 'monitoramento')">
+                    Utilizar drones e sensores
+                </button>
+
+                <button onclick="perder10('⚠️ Menor eficiência na análise.', 'monitoramento')">
+                    Realizar inspeções apenas ao final da safra
+                </button>
+            </div>
+
+            <h3>Como reduzir prejuízos causados por pragas?</h3>
+
+            <div id="pragas">
+                <button onclick="perder10('⚠️ Maior impacto ambiental.', 'pragas')">
+                    Aplicar defensivos preventivamente em toda a área
+                </button>
+
+                <button onclick="ganhar10('🐞 Controle equilibrado adotado.', 'pragas')">
+                    Investir em controle biológico
+                </button>
+            </div>
+
+            <h3>Como manter a produtividade do solo?</h3>
+
+            <div id="solo">
+                <button onclick="perder10('⚠️ Desgaste do solo acelerado.', 'solo')">
+                    Repetir a mesma cultura por vários anos
+                </button>
+
+                <button onclick="ganhar10('🌾 Solo mais saudável.', 'solo')">
+                    Fazer rotação de culturas
+                </button>
+            </div>
+
+            <h3>Como garantir água para períodos secos?</h3>
+
+            <div id="agua">
+                <button onclick="ganhar10('💧 Recurso reaproveitado.', 'agua')">
+                    Instalar reservatórios para captar chuva
+                </button>
+
+                <button onclick="perder10('⚠️ Maior dependência de recursos externos.', 'agua')">
+                    Aumentar a retirada de água de rios próximos
+                </button>
+            </div>
+
+            <p id="resultado"></p>
+
+            <button onclick="avaliar()">
+                Ver Resultado Final
+            </button>
+
+            <p id="final"></p>
+
+        </section>
+
+        <section id="quiz">
+            <h2>Quiz do Campo Sustentável</h2>
+
+            <p>Pontuação: <span id="placar">0</span></p>
+
+            <p id="progressoQuiz"></p>
+
+            <h3 id="pergunta"></h3>
+
+            <div id="respostas"></div>
+
+            <p id="quizResultado"></p>
+
+            <button onclick="proximaPergunta()">Próxima Pergunta</button>
+        </section>
+
+        <section id="tecnologia">
+
+            <h2>Tecnologias do Futuro</h2>
+
+            <div class="cards">
+
+                <div class="card" onclick="mostrarInfo(this)">
+                    <h3>🚁 Drones</h3>
+                    <p>Monitoram plantações em tempo real.</p>
+
+                    <div class="info-extra">
+                        Os drones ajudam a identificar pragas, falhas no plantio e desperdícios de água com rapidez.
+                    </div>
+                </div>
+
+                <div class="card" onclick="mostrarInfo(this)">
+                    <h3>☀️ Energia Solar</h3>
+                    <p>Produz energia limpa para a fazenda.</p>
+
+                    <div class="info-extra">
+                        A energia solar reduz custos e diminui a emissão de gases poluentes.
+                    </div>
+                </div>
+
+                <div class="card" onclick="mostrarInfo(this)">
+                    <h3>🤖 Inteligência Artificial</h3>
+                    <p>Ajuda na previsão de colheitas.</p>
+
+                    <div class="info-extra">
+                        A inteligência artificial analisa dados climáticos e auxilia na tomada de decisões.
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+
+            <p>Colhendo Sustentabilidade © 2026</p>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
